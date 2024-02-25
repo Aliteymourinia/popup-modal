@@ -1,0 +1,99 @@
+html {
+  margin: 0;
+}
+
+body {
+  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg)
+    no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: #06d85f;
+  font-family: tahoma, Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  margin-top: 100px;
+  text-align: center;
+  white-space: nowrap;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  width: 0px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  padding: 6em 15em;
+  margin-top: 5em;
+}
+button {
+  all: unset;
+  font-size: 1.5em;
+  padding: 0.5em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(19, 151, 91);
+  border-radius: 10px/10px;
+
+  border-style: groove;
+  margin-inline: -3.5em;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+button:hover {
+  background: #000000;
+}
+.popup {
+  scale: 0;
+  background-color: rgb(246, 246, 246);
+  width: 350px;
+  height: 250px;
+  position: fixed;
+  /* how to center a fixed content */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 0.5em;
+  padding-inline: 0.4em;
+  z-index: 1;
+  transition: scale 200ms ease-in;
+  & h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+
+    padding-inline: 0.3em;
+  }
+  & p {
+    font-size: 20px;
+
+    padding-inline: 0.5em;
+  }
+}
+.popup > button {
+  background: transparent;
+  color: #000000;
+  padding: 0px;
+  position: absolute;
+  right: 26%;
+  top: 3%;
+  font-size: 1.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.backdrop {
+  scale: 0;
+
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: #b5b1b1;
+  opacity: 0.5;
+  z-index: 0;
+  top: 0;
+  /* transition: scale 200ms ease; */
+}
+
+.scale {
+  scale: 1;
+}

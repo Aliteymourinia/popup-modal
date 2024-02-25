@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Popup/Modal Windows</h1>
+    <div class="box">
+      <button id="toggleModal">click on me</button>
+      <div class="backdrop"></div>
+      <div class="popup">
+        <button id="closeModal">
+          <i class="fa fa-close"></i>
+        </button>
+        <h2>Here i am </h2>
+        <p>
+          Thank to pop me out of that button, but now i'm done so you can close
+          this window!
+        </p>
+    </div>
+    <script>
+      const toggleBtn=document.querySelector('#toggleModal')
+     const popup=document.querySelector('.popup')
+     const backdrop=document.querySelector('.backdrop')
+     const closeBtn=document.querySelector('#closeModal')
+
+
+      toggleBtn.addEventListener('click',function () {
+        popup.classList.add('scale')
+     backdrop.classList.add('scale')
+      })
+
+      
+      closeBtn.addEventListener('click',function () {
+        popup.classList.remove('scale')
+     backdrop.classList.remove('scale')
+        
+      })
+
+     backdrop.addEventListener('click',function () {
+      popup.classList.remove('scale')
+     backdrop.classList.remove('scale')
+     })
+
+    </script>
+  </body>
+</html>
